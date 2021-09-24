@@ -1,0 +1,16 @@
+﻿@model IEnumerable<FileReader.Models.TextFile>
+@{
+    <h2>File List</h2>
+
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li>
+                <a asp-controller="Files"
+                   asp-action="Content"
+                   asp-route-id="@item.name">@item.name</a>
+            </li>
+        }
+    </ul>
+
+}
